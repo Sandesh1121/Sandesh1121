@@ -1,41 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Job Portal</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job portal</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
+  <div class="hero">
+   <nav>
       <ul>
-        <li><a href="#"><i class="fas fa-desktop"></i>Browse Jobs</a></li>
-        <li><a href="#"><i class="fas fa-home"></i>Overview</a></li>
-        <li><a href="#"><i class="fas fa-user"></i>My Profile</a></li>
-        <li><a href="#"><i class="fas fa-bell"></i>My Status</a></li>
-        <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li> 
-        <li><a href="#"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
         <li><i class="fas fa-briefcase"></i>Welcome to our Job Portal</li>
-      </ul>
+        <li><a href="#"><i class="fas fa-home"></i>Overview</a></li>
+        <li><a href="#"><i class="fas fa-info-circle"></i>About Us</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i>Contact Us</a></li>
+        <li><a href="#"><i class="fas fa-user"></i>My Profile</a></li>
      
+      </ul>
+        
+      </ul>
+      <img src="image/me.jpg" class="user-pic" onclick="toggleMenu()">
+
+   <div class="sub-menu-wrap" id="subMenu">
+    <div class="sub-menu">
+      <div class="user-info">
+        <img src="image/me.jpg" >
+        <h2>Sandesh Dharel</h2>
+      </div>
+      <hr>
+      <a href="#" class="sub-menu-link">
+        <img src="image/profile.jpg">
+        <p>Edit Profile</p>
+        <span>></span>
+      </a>
+      <a href="#" class="sub-menu-link">
+        <img src="image/settings.jpg">
+        <p>Settings</p>
+        <span>></span>
+      </a>
+      <a href="#" class="sub-menu-link">
+        <img src="image/help.jfif">
+        <p>Help and Support</p>
+        <span>></span>
+      </a>
+      <a href="#" class="sub-menu-link">
+        <img src="image/logout.png">
+        <p>Logout</p>
+        <span>></span>
+      </a>
+    </div>
+   </div>
     </nav>
-    <form class="search-bar" action="#" method="GET">
-      <input type="text" name="search" placeholder="Search by Skill, Title, or Organization">
-      <button type="submit">
-        <span class="icon"><i class="fas fa-search"></i></span>
-        Search
-      </button>
-    </form>
-  </header>
+    
+  </div>
+  <form class="search-bar" action="#" method="GET">
+    <input type="text" name="search" placeholder="Search by Skill, Title, or Organization">
+    <button type="submit">
+      <span class="icon"><i class="fas fa-search"></i></span>
+      Search
+    </button>
+  </form>
   
   <div class="content">
-  <p> Start your journey</p>
-  <p> Believe in yourself</p>
-  <p> Catch your Goals</p> 
-    <p>Enhance your Skills</p>
-   <p>Unlock your Potential</p> 
+    <p>
+      <span class="color-halfway">Start your journey</span><br>
+      <span class="color-halfway">Believe in yourself</span><br>
+      <span class="color-halfway">Catch your Goals</span><br>
+      <span class="color-halfway">Enhance your Skills</span><br>
+      <span class="color-halfway">Unlock your Potential</span>
+    </p>
   </div>
   
-  <script src="script.js"></script>
+  
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 Your Company. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <div class="social-media-icons">
+        <a href="https://www.facebook.com/zenith.dharel?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/dharel_sandesh?t=jYa6kMcuvlhAhvdV8t07oQ&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/sandesh._n._10?igshid=MzNlNGNkZWQ4Mg" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    let subMenu = document.getElementById("subMenu");
+    function toggleMenu(){
+      subMenu.classList.toggle("open-menu");
+    }
+  </script>
 </body>
 </html>
