@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Seeker Profile</title>
+  <link rel="stylesheet" href="profile-page.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="profile-container">
+    <div class="button-container">
+      <button class="edit-profile-button">Edit Profile</button>
+    </div>
+    
+    <div class="button-container">
+      <button class="save-profile-button">Save Profile</button>
+    </div>
+    <button class="change-password-button">Change Password</button>
+      <div class="password-container">
+        <input type="password" id="old-password" placeholder="Enter your old password">
+        <input type="password" id="new-password" placeholder="Enter your new password">
+        <input type="password" id="confirm-password" placeholder="Confirm new password">
+        <button class="save-password-button">Save Password</button>
+      </div>
+      
+    <div class="profile-picture">
+      <img src="image/profile.jpg" alt="Profile Picture">
+      <button class="edit-profile-picture-button">Edit Profile Picture</button>
+    </div>
+    <div class="profile-info">
+      <p><span>Name:</span> <span id="name">Sandesh Dharel</span></p>
+         <p><span>Username:</span> <span id="username">kaka123</span></p>
+      <p><span>Email:</span> <span id="email">sandeshdharel@gmail.com</span></p>
+      <p><span>Phone:</span> <span id="phone">9863047443</span></p>
+   
+    </div>
+    
+    <div class="skill-education-container">
+      <h3>Skills</h3>
+      <textarea readonly id="skills" placeholder="Enter your skills">Web Development, Graphic Design</textarea>
+    </div>
+    <div class="skill-education-container">
+      <h3>Education</h3>
+      <textarea readonly id="education" placeholder="Enter your educational status">Bachelor's Degree in Computer Science</textarea>
+    </div>
+    <div class="additional-info">
+      <h3>Additional Information</h3>
+      <textarea id="additional-info" placeholder="Enter additional information"></textarea>
+    </div>
+    
+   
+  </div>
+
+  <script src="profile-page.js"></script>
+</body>
+</html>
