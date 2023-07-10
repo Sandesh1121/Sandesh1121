@@ -1,0 +1,162 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  background-image: url(image/back.jpg);
+}
+
+.profile-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+}
+
+.button-container {
+  text-align: right;
+}
+
+.profile-picture {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.edit-profile-picture-button,
+.edit-profile-button,
+.save-profile-button,
+.change-password-button,
+.save-password-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-profile-button:hover,
+.save-profile-button:hover,
+.change-password-button:hover,
+.save-password-button:hover {
+  background-color: #45a049;
+}
+
+.profile-info {
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.additional-info,
+.skill-education-container {
+  margin-bottom: 20px;
+}
+
+.additional-info h3,
+.skill-education-container h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.skill-education-container textarea,
+.additional-info textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.password-container {
+  display: none;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.save-profile-button {
+  display: none;
+}
+.change-password-button {
+  display: none;
+}
+.edit-profile-picture-button {
+  display: none;
+}
+
+
+.password-container input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+}
+
+.password-container .save-password-button {
+  display: block;
+  margin-top: 10px;
+}
+
+
+h1 {
+  text-align: center;
+  color: #333333;
+}
+
+.profile-container {
+  background-color: #f9f9f9;
+}
+
+.button-container {
+  text-align: right;
+}
+
+.profile-info span {
+  font-weight: normal;
+  color: #555555;
+}
+
+.profile-info p:last-child {
+  margin-bottom: 0;
+}
+
+.additional-info textarea:focus,
+.skill-education-container textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.profile-info input,
+.additional-info textarea,
+.skill-education-container textarea {
+  transition: border-color 0.3s ease;
+}
+
+.save-profile-button,
+.save-password-button {
+  background-color: #007bff;
+}
+
+.save-profile-button:hover,
+.save-password-button:hover {
+  background-color: #0056b3;
+}
