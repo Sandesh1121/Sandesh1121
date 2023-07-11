@@ -30,6 +30,29 @@ editProfileButton.addEventListener('click', () => {
 });
 
 saveProfileButton.addEventListener('click', () => {
+  const nameValue = nameField.textContent.trim();
+  const emailValue = emailField.textContent.trim();
+  const phoneValue = phoneField.textContent.trim();
+  const usernameValue = usernameField.textContent.trim();
+
+  const requiredFields = [
+    { field: nameValue, fieldName: 'Name', fieldElement: nameField },
+    { field: emailValue, fieldName: 'Email', fieldElement: emailField },
+    { field: phoneValue, fieldName: 'Phone', fieldElement: phoneField },
+    { field: usernameValue, fieldName: 'Username', fieldElement: usernameField }
+  ];
+
+  for (const { field, fieldName, fieldElement } of requiredFields) {
+    if (field === '') {
+      fieldElement.value = '';
+      fieldElement.placeholder = `Error! Fill the ${fieldName}`;
+      fieldElement.style.borderColor = 'red';
+      return;
+    }
+  }
+
+
+
   nameField.contentEditable = false;
   emailField.contentEditable = false;
   phoneField.contentEditable = false;
@@ -61,7 +84,22 @@ savePasswordButton.addEventListener('click', () => {
   const newPassword = document.getElementById('new-password').value;
   const confirmPassword = document.getElementById('confirm-password').value;
 
-  // Validate password and perform necessary actions
+  if (oldPassword === '') {
+    alert('Please enter your old password.');
+    return;
+  }
+
+  if (newPassword === '') {
+    alert('Please enter your new password.');
+    return;
+  }
+
+  if (confirmPassword === '') {
+    alert('Please confirm your new password.');
+    return;
+  }
+
+
 
   passwordInputs.forEach((input) => {
     input.value = '';
@@ -69,4 +107,8 @@ savePasswordButton.addEventListener('click', () => {
 
   passwordContainer.style.display = 'none';
   changePasswordButton.style.display = 'inline-block';
+});
+
+profilePicture.addEventListener('click', () => {
+  profilePicture.classList.toggle('zoomed');
 });
