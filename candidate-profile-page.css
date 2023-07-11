@@ -42,7 +42,7 @@ body {
   background-color: #4caf50;
   color: #ffffff;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -159,4 +159,15 @@ h1 {
 .save-profile-button:hover,
 .save-password-button:hover {
   background-color: #0056b3;
+}
+.profile-picture img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-picture img.zoomed {
+  transform: scale(2.5);
 }
