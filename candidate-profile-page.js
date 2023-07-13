@@ -44,14 +44,13 @@ saveProfileButton.addEventListener('click', () => {
 
   for (const { field, fieldName, fieldElement } of requiredFields) {
     if (field === '') {
-      fieldElement.value = '';
-      fieldElement.placeholder = `Error! Fill the ${fieldName}`;
-      fieldElement.style.borderColor = 'red';
+      fieldElement.nextElementSibling.textContent = `Error: Please write your ${fieldName}`;
+      fieldElement.nextElementSibling.style.color = 'red';
       return;
     }
   }
 
-
+  // Save profile logic here
 
   nameField.contentEditable = false;
   emailField.contentEditable = false;
@@ -99,7 +98,7 @@ savePasswordButton.addEventListener('click', () => {
     return;
   }
 
-
+  // Validate password and perform necessary actions
 
   passwordInputs.forEach((input) => {
     input.value = '';
