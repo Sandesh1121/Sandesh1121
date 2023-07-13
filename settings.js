@@ -85,3 +85,13 @@ document.getElementById('password').addEventListener('input', (event) => {
 // Initially hide the save button and password fields
 saveButton.style.display = 'none';
 passwordFields.style.display = 'none';
+
+const deleteButton = document.querySelector('.delete-button');
+
+deleteButton.addEventListener('click', () => {
+  const confirmation = confirm('Are you sure you want to delete your account?');
+  if (confirmation) {
+    // Perform account delete logic here
+    alert('Account deleted successfully!');
+  }
+});
